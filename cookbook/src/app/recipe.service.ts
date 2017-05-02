@@ -28,4 +28,8 @@ export class RecipeService {
     return this.recipeSelected;
   }
 
+  setRecipeSelected(recipe: Recipe) {
+    this.recipeSelected = recipe;
+  }
+
 }

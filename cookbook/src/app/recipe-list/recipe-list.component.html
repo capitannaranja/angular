@@ -2,5 +2,5 @@
   {{title}}
 </h1>
 <ul>
-  <li *ngFor="let recipe of recipeService.getRecipes()">{{recipe.name}} <img src="{{recipe.imageUrl}}"></li>
+  <li *ngFor="let recipe of recipeService.getRecipes()" (click)="onSelect(recipe)">{{recipe.name}} <img src="{{recipe.imageUrl}}"></li>
 </ul>
