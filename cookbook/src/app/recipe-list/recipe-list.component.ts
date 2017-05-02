@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Recipe } from '../recipe.model';
 
 @Component({
   selector: 'app-recipe-list',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeListComponent implements OnInit {
 
+	private title: string = "All recipes";
 	private recipes: Array<Recipe> = [
 	    new Recipe("Maultaschen", "Kobi", "https://www.stuttgart-tourist.de/images/x/q/w/q/o/r/p/0/w/d/8/-/maultasche.jpeg", "Ob mit Zwiebeln geschmelzt, in Brühe gekocht oder mit Ei geröstet - die schwäbische Spezialität ist so lecker, dass sie heute in vielerlei Kombinationen auf dem Speiseplan steht. Der Klassiker besteht unter anderem aus Spinat, Tatar, Zwiebeln und Kräutern, aber auch vegetarische Varianten oder Leckereien wie Lachsmaultaschen sind beliebt."),
 	    new Recipe("Schwäbischer Kartoffelsalat", "Tobias", "https://www.stuttgart-tourist.de/images/3/p/3/c/g/g/m/y/7/p/w/-/kartoffelsalat.jpeg", "Traditionell mit Maultaschen, als Beilage zu Saitenwürstle, zum Grillen oder einfach im gemischten Salat - der schwäbische Kartoffelsalat passt zu fast allem und schmeckt einfach gut! Hauptsache, er ist schön schmotzig."),

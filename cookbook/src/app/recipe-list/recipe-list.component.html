@@ -1,3 +1,6 @@
-<p>
-  recipe-list works!
-</p>
+<h1>
+  {{title}}
+</h1>
+<ul>
+  <li *ngFor="let recipe of recipes">{{recipe.name}} <img src="{{recipe.imageUrl}}"></li>
+</ul>
