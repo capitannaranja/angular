@@ -9,6 +9,7 @@ import { RecipeOverviewComponent } from './recipe-overview/recipe-overview.compo
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RecipeCreateComponent } from './recipe-create/recipe-create.component';
+import { RecipeService } from './recipe.service';
 
 import {routing} from "./app.routing";
 
@@ -27,7 +28,9 @@ import {routing} from "./app.routing";
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [
+    RecipeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
