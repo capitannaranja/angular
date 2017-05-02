@@ -1,0 +1,156 @@
+body {
+    margin:0;
+    font-family: Arial sans-serif;
+    padding-top:80px;
+}
+img {
+    width:50px;
+}
+
+.header {
+    border-bottom:1px solid #000;
+    background:#333;
+    height:70px;
+    margin:0;
+    padding:0;
+    top:0;
+    position:fixed;
+    width:100%;
+    display:flex;
+    z-index:1;
+}
+.header::before {
+    background-image: url("http://www.chefmichaeld.com/wp-content/uploads/2014/04/scottsdale-private-chef-icon-2-150x150.png");
+    background-size: 50px 50px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin:10px;
+    margin-right:30px;
+    content:"";
+}
+.header ul {
+    display: inline-block;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+}
+.header ul li {
+    text-align: center;
+    flex-grow: 1;
+    height:67px;
+    padding-left:10px;
+    padding-right:10px;
+    border-bottom:4px solid transparent;
+    margin-left:10px;
+    margin-right:10px;
+}
+.header ul li .active, .header ul li:hover {
+    border-bottom:4px solid #AECB25;
+}
+.header ul li a {
+    color:#FFF;
+    height:67px;
+    line-height:70px;
+    text-decoration: none;
+}
+
+.recipe-overview {
+    display:flex !important;
+    flex-direction: row;
+}
+
+.recipe-list {
+    margin:20px;
+    padding:10px;
+    border-radius:5px;
+    border:1px solid #DDDDDD;
+    background:#F7F7F7;
+    overflow:hidden;
+    flex:2;
+}
+.recipe-list h1, .recipe-detail h1 {
+    font-size:16px;
+    margin:0;
+    padding:5px;
+    border-bottom:1px solid #AECB25;
+    text-transform: uppercase;
+}
+.recipe-list ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    margin-top:10px;
+    padding:0;
+}
+.recipe-list ul li {
+    cursor:pointer;
+    margin:10px;
+    padding:0;
+    flex-wrap:wrap;
+    line-height:50px;
+    vertical-align: middle;
+    border:1px solid #DDDDDD;
+    border-radius:5px;
+    display:block;
+    padding:10px;
+    background:#FCFCFC;
+}
+.recipe-list ul li img {
+    display:block;
+    float:left;
+    margin-right:10px;
+    width: 100px !important;
+    height: 50px !important;
+    border-radius:3px;
+    background:#EEE;
+    border:none;
+}
+.recipe-list ul li a {
+    color:#000;
+    text-decoration: none;
+}
+.recipe-list ul li button {
+    cursor: pointer;
+    float:right;
+    height:30px;
+    margin-top:10px;
+    margin-right:10px;
+    border-radius:3px;
+    color:#EEE;
+    border:0;
+    background:#333;
+    display:none;
+}
+.recipe-list ul li:hover {
+    background: #AECB25;
+}
+.recipe-list ul li:hover button {
+    display:block;
+}
+
+
+.recipe-detail {
+    flex: 1;
+    margin:20px;
+    margin-left:0;
+    padding:10px;
+    border-radius:5px;
+    border:1px solid #DDDDDD;
+    background:#F7F7F7;
+    overflow:hidden;
+}
+
+.recipe-detail img {
+    width:100%;
+    margin-top:10px;
+    border-radius:3px;
+}
+.recipe-detail h2 {
+
+}
+.recipe-create {
+}
