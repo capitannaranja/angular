@@ -1,5 +1,8 @@
+import { Recipe } from './../recipe.model';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from "@angular/forms";
+import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { RecipeService } from "app/recipe.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-recipe-create',
@@ -9,19 +12,28 @@ import { FormGroup, FormControl } from "@angular/forms";
 export class RecipeCreateComponent implements OnInit {
   private myForm: FormGroup;
   
-  constructor() { }
+  constructor(private recipeService: RecipeService, private router: Router) { }
 
   ngOnInit() {
     this.myForm = new FormGroup({
-      name: new FormControl(null),
-      imageUrl: new FormControl(null),
-      author: new FormControl(null),
-      instruction: new FormControl(null)
+      name: new FormControl(null, Validators.required),
+      imageUrl: new FormControl(null, Validators.required),
+      author: new FormControl(null, Validators.required),
+      instruction: new FormControl(null, Validators.required)
     });
   }
 
   onSubmit() {
-    console.log(this.myForm);
+    let recipe = new Recipe(
+      this.myForm.get("name").value,
+      this.myForm.get("author").value,
+      this.myForm.get("imageUrl").value,
+      this.myForm.get("instruction").value
+    )
+
+    this.recipeService.addRecipe(recipe);
+
+    this.router.navigate(['/','overview']);
   }
 
 }

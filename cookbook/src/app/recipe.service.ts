@@ -32,4 +32,8 @@ export class RecipeService {
     this.recipeSelected = recipe;
   }
 
+  addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe);
+  }
+
 }
