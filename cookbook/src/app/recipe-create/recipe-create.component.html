@@ -1,3 +1,21 @@
-<p>
-  recipe-create works!
-</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <table>
+    <tr>
+      <td>Name</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>Image URL</td>
+      <td><input type="text" formControlName="imageUrl"></td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td><input type="text" formControlName="author"></td>
+    </tr>
+    <tr>
+      <td>Instruction</td>
+      <td><textarea formControlName="instruction"></textarea></td>
+    </tr>
+  </table>
+  <button type="submit">Erstellen</button>
+</form>
