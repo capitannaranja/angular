@@ -1,22 +1,25 @@
-<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-  <table>
-    <tr>
-      <td>Name</td>
-      <td><input type="text" formControlName="name"></td>
-    </tr>
-    <tr>
-      <td>Image URL</td>
-      <td><input type="text" formControlName="imageUrl"></td>
-      <td><img src="{{myForm.get('imageUrl').value}}" alt="Image not found"></td>
-    </tr>
-    <tr>
-      <td>Author</td>
-      <td><input type="text" formControlName="author"></td>
-    </tr>
-    <tr>
-      <td>Instruction</td>
-      <td><textarea formControlName="instruction"></textarea></td>
-    </tr>
-  </table>
-  <button type="submit" [disabled]="!myForm.valid">Erstellen</button>
-</form>
+<div class="recipe-create">
+  <h1>Create Recipe</h1>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <table>
+      <tr>
+        <td>Name</td>
+        <td><input type="text" formControlName="name"></td>
+      </tr>
+      <tr>
+        <td>Image URL</td>
+        <td><input type="text" formControlName="imageUrl"></td>
+        <td><img src="{{myForm.get('imageUrl').value}}" alt="Image not found"></td>
+      </tr>
+      <tr>
+        <td>Author</td>
+        <td><input type="text" formControlName="author"></td>
+      </tr>
+      <tr>
+        <td>Instruction</td>
+        <td><textarea formControlName="instruction"></textarea></td>
+      </tr>
+    </table>
+    <button type="submit" [disabled]="!myForm.valid">Erstellen</button>
+  </form>
+</div>
