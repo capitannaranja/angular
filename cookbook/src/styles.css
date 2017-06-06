@@ -176,16 +176,16 @@ h1 {
   padding: 10px;
 }
 
-
-
 table td{
     vertical-align: top;
     line-height:30px;
     padding:10px;
 }
+
 td:nth-child(1) {
     width:120px;
 }
+
 .recipe-create img {
   width: 200px;
   height: 100px;
