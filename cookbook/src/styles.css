@@ -33,7 +33,6 @@ img {
 }
 
 .header ul {
-  display: inline-block;
   list-style-type: none;
   display: flex;
   flex-direction: row;
