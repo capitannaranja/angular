@@ -1,6 +1,6 @@
 node:
     restart: always
     build: .
-    container_name: ${NODE_CONTAINER_NAME}
+    container_name: angular2-cookbook-app
     ports:
-        - ${NODE_EXTERNAL_PORT}:4200 
+        - 3457:4200 
