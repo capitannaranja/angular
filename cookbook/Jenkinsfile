@@ -3,8 +3,8 @@ node {
          git([url: 'https://github.com/capitannaranja/angular.git', branch: 'final'])
    }
    stage('Docker build, run and clean') {
-         sh "docker-compose -f docker-compose.yml build"
-         sh "docker-compose -f docker-compose.yml up -d"
+         sh "docker-compose -f cookbook/docker-compose.yml build"
+         sh "docker-compose -f cookbook/docker-compose.yml up -d"
          sh "docker images --no-trunc --all --quiet --filter='dangling=true' | xargs --no-run-if-empty docker rmi -f"
    }
 }
