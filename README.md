@@ -3,7 +3,7 @@
 [Workshop Website](http://workshop.id33nfabrik.de/ "Workshop Website") <br />
 [Finale Cookbook App](http://cookbook.id33nfabrik.de/ "Finale Cookbook App")
 
-## Authoren
+## Autoren
 - Tobias Ebelere
 - Christof Kost
 - Korbinian Kuhn
