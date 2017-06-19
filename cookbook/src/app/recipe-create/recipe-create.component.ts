@@ -8,14 +8,14 @@ import { FormGroup, FormControl } from "@angular/forms";
 })
 export class RecipeCreateComponent implements OnInit {
   private myForm: FormGroup;
-  
+
   constructor() { }
 
   ngOnInit() {
     this.myForm = new FormGroup({
       name: new FormControl(null),
-      imageUrl: new FormControl(null),
       author: new FormControl(null),
+      imageUrl: new FormControl(null),
       instruction: new FormControl(null)
     });
   }
