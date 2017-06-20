@@ -11,14 +11,14 @@ import { Router } from "@angular/router";
 })
 export class RecipeCreateComponent implements OnInit {
   private myForm: FormGroup;
-  
+
   constructor(private recipeService: RecipeService, private router: Router) { }
 
   ngOnInit() {
     this.myForm = new FormGroup({
       name: new FormControl(null, Validators.required),
-      imageUrl: new FormControl(null, Validators.required),
       author: new FormControl(null, Validators.required),
+      imageUrl: new FormControl(null, Validators.required),
       instruction: new FormControl(null, Validators.required)
     });
   }
