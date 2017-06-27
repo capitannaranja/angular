@@ -1,6 +1,7 @@
 <h1>
   {{title}}
 </h1>
+<input type="text" placeholder="Filter" #filter (keyup)="0">
 <ul>
-  <li *ngFor="let recipe of recipeService.getRecipes()" (click)="onSelect(recipe)">{{recipe.name}} <img src="{{recipe.imageUrl}}"></li>
+  <li *ngFor="let recipe of recipeService.getRecipes() | filter: filter.value" (click)="onSelect(recipe)">{{recipe.name}} <img src="{{recipe.imageUrl}}"></li>
 </ul>

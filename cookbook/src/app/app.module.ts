@@ -12,6 +12,7 @@ import { RecipeCreateComponent } from './recipe-create/recipe-create.component';
 import { RecipeService } from './recipe.service';
 
 import {routing} from "./app.routing";
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {routing} from "./app.routing";
     RecipeOverviewComponent,
     RecipeListComponent,
     RecipeDetailComponent,
-    RecipeCreateComponent
+    RecipeCreateComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
